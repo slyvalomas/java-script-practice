@@ -57,4 +57,25 @@ function getBody(arr){
   return arr[0] //arr for  body[0] as an argument
 }
 console.log(getBody(body))
+//+-----------------------------------------------------------------------------------------------
+const saveTap =document.querySelector(".tap")
+const taps = [
+  {url:"https://linkedin.com"}
+]
+function saveing(tapI){
+  ul_el.innerHTML = "";
 
+  for (let i = 0; i < tapI.length; i++) {
+    ul_el.innerHTML += `
+      <li class='list-a'>
+        <a class='links' target='_blank' href='${tapI[i].url}'>${tapI[i].url}</a>
+      </li>`;
+  }
+
+  localStorage.setItem("myleads", JSON.stringify(tapI.map(obj => obj.url)));
+ 
+}
+
+saveTap.addEventListener("click",function(){
+  saveing(taps)
+})
