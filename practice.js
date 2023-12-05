@@ -79,3 +79,172 @@ function saveing(tapI){
 saveTap.addEventListener("click",function(){
   saveing(taps)
 })
+//----------------------------------------------------------------------------------------------------------------
+
+const footer__btn = document.querySelector(".footer__btn");
+
+console.log(footer__btn)
+const footer__sittings = document.querySelector(".container__btn");
+console.log(footer__sittings)
+footer__btn.addEventListener("click", function(){
+    if (footer__sittings.style.display === "block"){
+        footer__sittings.style.display = "none";
+    } else{
+        footer__sittings.style.display = "block";
+    }
+});
+
+//----------------------------------------------------------------------------------------------------------------
+
+const player ="me"
+const game=""
+const opponent=""
+let point=""
+let hasWon=""
+if (hasWon===true){
+    console.log(`${player} got ${point} points and win the ${game} game`)
+}
+let array=[ 
+    "Coffee",
+    "Laptop",
+    "Mountain",
+    "Book",
+    "Sunflower",
+    "Guitar",
+    "Beach",
+    "Galaxy",
+    "Chocolate",
+    "Soccer ball"
+]
+function ray(aho){
+    for (let i = 0 ; i <array.length;i++){
+        console.log(array[i])
+        localStorage.setItem("gods",`the god athena is one of the most intelligent gods of all the mythology that ever exist `)
+    }
+}
+
+
+function deleteLocalStorage(){
+    localStorage.clear()
+}
+
+const local=localStorage.getItem("gods","array")
+console.log(local)
+
+//----------------------------------------------------------------------------------------------------------------
+function add(x,y){
+  return x+y
+  
+}
+add(5,8)
+let data = [
+    {
+        player:"jane",
+        score:52
+    },
+    {
+        player:"mark",
+        score:41
+    }
+]
+
+const logo=document.querySelector(".logo")
+logo.addEventListener("click",function(){
+    const jane=`the player ${data[0].player} have ${data[1].score} points`
+    console.log(jane)
+    localStorage.clear()
+    localStorage.setItem("logo",jane)
+    
+})
+console.log(localStorage.getItem("logo"))// basically the logo footer is an <a></a> when you click on it, it refreshes the page so the console will be gone That is why I did take the console log  out of the click function and use the local storage to check if I did make it right 
+
+//----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const largestCountriesBySize = [
+    { country: "Russia", size: 17098242 },
+    { country: "Canada", size: 9976140 },
+    { country: "United States", size: 9833517 },
+    { country: "China", size: 9596960 },
+    { country: "Brazil", size: 8515767 },
+];
+const largestCountriesByPopulation = [
+    { country: "China", population: 1444216107 },
+    { country: "India", population: 1393409038 },
+    { country: "United States", population: 332915073 },
+    { country: "Indonesia", population: 276361783 },
+    { country: "Pakistan", population: 225199937 },
+];
+
+
+function generate(size,pop){
+    for (let i = 0 ; i < pop.length;i++){
+        const bla2=`the ${i+1} largest country by population is`
+        console.log(`${bla2} ${pop[i].country} and it have ${pop[i].population}  in the population`)
+        const bla1=`the ${i+1} largest country by size is`
+        console.log(`${bla1} ${size[i].country} and its size is ${size[i].size}km²`)
+    }
+}
+  //----------------------------------------------------------------------------------------------------------------
+
+generate(largestCountriesBySize,largestCountriesByPopulation)
+
+const img=[
+    {
+        photo:"../main-picture/footer__btn.png",
+        nameOf: "brin"
+    },
+
+    {
+        photo:"../main-picture/Los_Pollos.webp",
+        nameOf: "josipi"
+    },
+    {
+        photo:"../main-picture/footer__btn.png",
+        nameOf: "youssef"
+    }
+    
+]
+
+const section = document.querySelector(".section")
+function  image() {  
+    for (let i = 0 ; i < img.length;i++){
+        section.innerHTML += `<img class="proImage" width="100px"  height="100px" src="${img[i].photo}"><p>${img[i].nameOf}</p>
+        
+        </img>`
+        const proImage= document.querySelector(".proImage")
+        proImage.style.padding=""
+        
+        section.style.flexFlow="column wrap"
+        section.style.display="flex"
+        proImage.style.justifyContent="center"
+        section.style.alignItems="center"
+        section.style.margin=" 1rem  0em"
+        section.style.textTransform="uppercase "
+}}
+
+function images(){
+    image()
+}
+images()
+//----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
