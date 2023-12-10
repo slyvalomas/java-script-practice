@@ -240,7 +240,176 @@ function images(){
 }
 images()
 //----------------------------------------------------------------------------------------------------------------
+console.log("Hello from JavaScript");
+var myStr= "im a \"double quoated\" string inside \"double quotes\"";
+console.log(myStr);
+myStr =`im a "double quoted" string inside "double quotes"`;
+console.log(myStr);
+myStr=`<h1>hi there im java script \n and also im ${myStr}</h1>`;
+const body =document.querySelector("body");
+body.innerHTML=myStr;
+body.textContent+="this is first line \n this is the second line \n and this is the third line";
+body.style.fontSize="0.75rem";
+var  newStr = "brahim is " + "a MEN that have 0$ for now";
+newStr += " im poor";
+console.log(newStr);
+var myName;
+const firstName="brahim";
+const lastName="abdelmoumen";
+myName = firstName + " " +lastName ;
+ //or `${firstName} ${lastName}
+myStr="hello my name is " +myName+"how are you ?" // or `hello my name is ${myName} how are you ?`
+console.log(myStr)
+body.textContent+= " "
+if (myName===myName.toUpperCase){
+    console.log("this name is uppercase")
+    console.log(myName.length)
+}else {
+    console.log("this name is not uppercase") 
+    console.log(myName.length)
+    for (let i=0 ; i<myName.length ; i++){
+        body.textContent+=myName[i]
+    }
+    
+}
+function whats(netName,netSchool,netGme,netWorth,network){
+    var  result = "" ;
+    result = ` hello my name is ${netName} and ${netSchool} my favorit game is ${netGme} my networth is ${netWorth} and i know many pepole and they are ${network}`
+    return result
+}
+console.log(whats("brahim","je suis un etudiant sur ecole supirure de thechnology casablanca ESTC","GOD OF WAR","-1MAD","solo for life",))
+// lets creat somthing like facebook (not that close just for time becuase i will just add text)
+function post(name ,context,text,likes,comments){
+    let postPack = body.innerHTML=`
+    <div>
+    <h1 class="name">${name}<h2/>
+    <h2 class="context">${context}<h2/>
+    <h3 class="text">${text}<h3/>
+    <p class="likes">${likes}<p/>
+    <p class="comments">${comments}<p/>
+    <div/>
+    `
+    
 
+    }
+var array =[  //small database no algoritms xd no tracking just random im compating with facebook 
+    {name:"brahim" ,context:"CAN 2023",text:"i think morocco can get to the sumi final in this AFCON!(they will win )",likes:"50k",comments:"viva algeria"
+    },
+    {name:"ahmed" ,context:"freecodecamp",text:"what is world cup?",likes:"50k",comments:"viva algeria"
+    },
+    {name:"yessin" ,context:"world cup",text:"i think morocco can get to the sumi final in this qatar world cup!(they will win )",likes:5000,comments:"viva algeria"
+    },
+]
+
+function creatRandomPost(){
+    let x = Math.floor(Math.random()*array.length) 
+    post(array[x].name ,array[x].context,array[x].text,array[x].likes,array[x].comments);
+    
+   
+}
+// function creatmultiplePosts(){
+//     for (let x=0;x<array.length;x++){
+//     let postPack = body.innerHTML=`
+//     <div>
+//     <h1 class="name">${name}<h2/>
+//     <h2 class="context">${context}<h2/>
+//     <h3 class="text">${text}<h3/>
+//     <p class="likes">${likes}<p/>
+//     <p class="comments">${comments}<p/>
+//     <div/>
+//     `    
+//     } 
+    
+//oh waw a new guy joined 
+ array.push({name:"the guy's name " ,context:"first post!",text:"hi there im using facebook!",likes:5000,comments:"viva algeria"//viva algeria is represents the anoying algeria national team lovers you can see them in facebook crying about gasama and toko ekambi goal on the 120min that cick them out of the world cup califications 
+    })
+    
+    
+// }
+// creatmultiplePosts()
+creatRandomPost()
+//oh no the guy is band becuase he is a scammer so all hes posts are removed from the database
+array.pop()
+//oh brahim removed his post because morocco win the afcon a
+array.shift()
+//oh it was just a mistake it was just miss click 
+//
+array.unshift({name:"brahim" ,context:"CAN 2023",text:"i think morocco can get to the sumi final in this AFCON!(they will win )",likes:"50k",comments:"viva algeria"
+    })
+creatRandomPost()
+// so if i will recreate facebook page i just need to recreat the ineerHTML on post() without touching the database or anything becuase the array is always fix until the guy update the text or someone else ad a comment but should i put the array on local storage or on a real data base when i will recreate facebook on the next project
+function creatRandomNmber(RandomNmber){
+    return Math.random()*RandomNmber;
+}
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(creatRandomNmber(7))
+function add(x,y){
+    return x + y
+}
+console.log(add(6,2))
+
+function plusInfinte(x,y){
+    return x / y
+}
+console.log(plusInfinte(1,0));
+
+
+
+
+
+let globale = 15;
+function local(){
+    var localism = 10;
+} ;
+function ceckGlobalism(){
+    
+    let message = ""
+    if (typeof global !="undefined" ){
+        message =`global: ${globale}` 
+    }
+    if (typeof localism != "undefined"){
+        message = `localism:${localism}`
+    }else{
+        message=`localism is undefinde`
+    }
+    console.log(message)
+    
+}
+ceckGlobalism()
+console.log(JSON.stringify(array))
+localStorage.setItem("dataBase" , JSON.stringify(array))
+function trues(istrue){
+    if (istrue===true){//or just(istrue)
+    return "yes its true"
+        
+    }else {
+        return " no its false!"
+}
+}
+
+
+function falses(isfase){
+     if (isfase !=true){
+        return "yes its false "
+    }else {
+        return "no its true"
+    }
+}
+
+console.log(trues(true))
+console.log(falses(false))
+function test(x){
+    if (x===5){
+        return "equal"
+    }else{
+        return "not equal"
+    }
+    
+}
+console.log(test(8))
 
 
 
