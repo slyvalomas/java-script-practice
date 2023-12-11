@@ -356,7 +356,7 @@ function plusInfinte(x,y){
 }
 console.log(plusInfinte(1,0));
 
-
+//--------------------------------------------------------------------------------------------------
 
 
 
@@ -410,10 +410,118 @@ function test(x){
     
 }
 console.log(test(8))
+console.log("Hello from JavaScript");
+let val  =21
+if (val<=50 && val>=25){
+    console.log ("yes")
+}else {
+    console.log("no")
+};
+if (val>20 || val<10){
+    console.log ("outside of 10-20")
+}else {
+    console.log("inside of 10-20")
+}
+function lessthan(carim){
+    if (carim<10 && carim>=5){
+        return "less than 10"
+    }else if (carim<5){
+        return "less than 5"
+    }else{
+        return "grater than or equal to  10"
+    }
+}
 
+console.log(lessthan(2))
 
+function lessthan2(xbox){
+    if ( xbox<=5){
+        return "less than 5"
+    }else if (xbox<10){
+        return "less than 10"
+    }else{
+        return "grater than or equal to  10"
+    }
+}
 
-
-
-
-
+console.log(lessthan2(7))
+function fontSize(x){
+    if(x<10){
+        return "very small"
+    }else if(x<16){
+        return "small"
+    }else if(x<20){
+        return "meduim"
+    }else if(x<25){
+        return "large"
+    }else{
+        return "very large"
+    }
+}
+console.log(fontSize(34))
+function switshing(val){
+    let message = "";
+    switch(val){
+        case 1:
+        message="alpha"
+        break;
+        case 2:
+        message="beta"
+        break;
+        case 3:
+        message="gamma"
+        break;
+        case 4,5,6,7,8,9,10:
+        message="delta"
+        break;
+        default:
+        message = "nothing im tired"
+    }
+    
+    
+    console.log(message)
+}
+switshing(10)
+var count = 0;
+function cc(card){
+    switch(card){
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        count++;
+        break; 
+        case 10:
+        case "JACK":
+        case "QUEEN":
+        case "KING":
+        case "ACE":
+        count--;
+        break;
+        
+    }
+    var holdbet="hold"
+    if (count>0){
+        holdbet="bet"
+    }
+    return count + " " + holdbet
+}
+function ccs(card){
+    if (card===2||card===3||card===4||card===5||card===6){
+        count++;
+    }else if(card===10||
+             card==="JACK"||
+             card=== "QUEEN"||
+             card ==="KING"||
+             card==="ACE") {
+        count--;
+    }
+      var holdbet="hold"
+    if (count>0){
+        holdbet="bet"
+    }
+    return count + " " + holdbet
+}
+console.log(cc("KING"))
+console.log(ccs("JACK"))
